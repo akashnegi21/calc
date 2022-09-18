@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>&#169;Akash Negi Calculator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body><h1>Binary Calculator</h1>
+        
+        <div class="calculator">
+        <input type="text" id="input"/ onkeyup="change()">
+            <div class="calculator-button">
+                <button class="calc-button is-clear" id="clear" onclick="clearAll()">CLEAR</button>
+                <button class="calc-button" id="del" onclick="del()">DEL</button>
+                <button class="calc-button" id="zero" onclick="changezero()">0</button>
+                <button class="calc-button decimal" id="todecimal" onclick="binaryToDecimal()">ToDecimal</button>
+                <button class="calc-button" id="one" onclick="changeone()" >1</button>
+                <button class="calc-button hexa" id="tohexa" onclick="binaryToHexa()">ToHexa</button>
+                <button class="calc-button" id="r">R</button>
+                <button class="calc-button octal" id="tooctal" onclick="binaryToOctal()">ToOctal</button>
+             
+                <button class="calc-button" id="plus" onclick="operation('add')">+</button>
+                <button class="calc-button" id="minus" onclick="operation('sub')">-</button>
+                <button class="calc-button" id="multiply" onclick="operation('mul')">*</button>
+                
+                <button class="calc-button" id="divide" onclick="operation('div')">/</button>
+                <button class="calc-button equals" id="equals"'>&equals;</button>
+            </div>
+        
+        </div>
+        
+&#169;Akash Negi &#174; <i>verified by govt of india</i>
+        <script src="index.js">
+
+        </script>
+</body>
+</html>
