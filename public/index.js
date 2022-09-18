@@ -4,8 +4,10 @@ function change(){
     var ele=document.querySelector('input').value;
     console.log(ele)
     ele1=ele.split('')
+    
     var b=ele1.every((e)=>{
-        if(e=='1' || e=='0' ){
+        
+        if(e=='1' || e=='0' || e=='+'){
             return true;
         }
     })
@@ -17,6 +19,7 @@ function change(){
     else{
         temp=ele1.join('')
     }
+    
     input.value=temp;
     console.log(temp)
 }
@@ -120,3 +123,15 @@ function operation(e){
         
     }
 }
+function randomBinary(){
+    function randomDigit() {
+        return Math.floor(Math.random() * Math.floor(2));
+      }
+        let binary = "";
+        for(let i = 0; i < 6; ++i) {
+          binary += randomDigit();
+        }
+        console.log(binary);
+        input.value=binary;
+        temp=binary;
+      }
