@@ -122,6 +122,9 @@ function operation(e){
     }
         
     }
+    else if(e=='leftshift'){
+        
+    }
 }
 function randomBinary(){
     function randomDigit() {
@@ -135,3 +138,36 @@ function randomBinary(){
         input.value=binary;
         temp=binary;
       }
+
+
+
+//weather
+const date = new Date();
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+let day = days[date.getDay()];
+let site = 'https://api.openweathermap.org/data/2.5/weather?q=Dehradun&appid=d0ac0b02eb3f727ee5ab0a7c005e6a54';
+const iTag = document.querySelector('.ico');
+
+fetch(site)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        document.querySelector('#temperature').innerHTML = (data.main.temp-273.5).toFixed(0);
+        document.querySelector('#city').innerHTML =data.name;
+        document.querySelector('#day').innerHTML =day;
+        document.querySelector('#date').innerHTML = `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}`;
+        document.querySelector('.windspeed').innerHTML =data.wind.speed;
+        document.querySelector('.humidity').innerHTML = data.main.humidity;
+        document.querySelector('.pressure').innerHTML = data.main.pressure;
+        document.querySelector('.sunrise-time').innerHTML = data.sys.sunrise;
+        document.querySelector('.sunset-time').innerHTML = data.sys.sunset;
+        document.querySelector('#weather-status').innerHTML = data.weather[0].main;
+        if(data.weather[0].main == 'Sunny'){
+            console.log(data.weather[0].main);
+            iTag.innerHTML = '<i class="fa fa-sun"></i>';
+        }
+        else if(data.weather[0].main == 'Clouds'){
+            iTag.innerHTML = '<i class="fa fa-cloud"></i>';
+        }
+    });
