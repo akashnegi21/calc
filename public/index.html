@@ -3,10 +3,12 @@
         <title>&#169;Akash Negi Calculator</title>
         <link rel="stylesheet" href="style.css">
         <link rel="icon" href="https://i.postimg.cc/rsyMwMMc/icons8-calculate-48.png" type="image/png" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body><h1>Binary Calculator</h1>
-        
+        <div class="big">
+            <div class="left">
         <div class="calculator">
         <input type="text" id="input"/ onkeyup="change()">
             <div class="calculator-button">
@@ -22,15 +24,63 @@
                 <button class="calc-button" id="plus" onclick="operation('add')">+</button>
                 <button class="calc-button" id="minus" onclick="operation('sub')">-</button>
                 <button class="calc-button" id="multiply" onclick="operation('mul')">*</button>
-                
                 <button class="calc-button" id="divide" onclick="operation('div')">/</button>
+
+                <button class="calc-button" id="leftshift" onclick="operation('leftshift')"><<<</button>
+                <button class="calc-button" id="rightshift" onclick="operation('rightshift')">>>></button>
+                <button class="calc-button" id="binaryand" onclick="operation('binaryand')">&</button> 
+                <button class="calc-button" id="binaryor" onclick="operation('binaryor')">|</button>
                 <button class="calc-button equals" id="equals"'>&equals;</button>
             </div>
         
         </div>
-        
+    </div>
+</div>
+<div class="right">
+    <div class="wrapper">
+        <div class="widget-container">
+          <div class="top-left">
+            <h1 class="city" id="city">Weather Widget App</h1>
+            <h2 id="day">Day</h2>
+            <h3 id="date">Month, Day Year</h3>
+              <!--       <a target="_blank" href="https://codepen.io/myleschuahiock/"><p id="codepen-link">codepen.io/myleschuahiock</p></a> -->
+            <p class="geo"></p>
+          </div>
+          <div class="top-right">
+            
+        <p id="weather-status">Weather / Weather Status</p>
+        <span class="ico"></span>
+          </div>
+          <div class="horizontal-half-divider"></div>
+          <div class="bottom-left">
+            <h1 id="temperature">0</h1>
+            <h2 id="celsius">&degC</h2>
+            <h2 id="temp-divider">/</h2>
+            <h2 id="fahrenheit">&degF</h2>
+          </div>
+          
+          <div class="vertical-half-divider"></div>
+          <div class="bottom-right">
+            <div class="other-details-key">
+              <p>Wind Speed</p>
+              <p>Humidity</p>
+              <p>Pressure</p>
+              <p>Sunrise Time</p>
+              <p>Sunset Time</p>
+            </div>
+            <div class="other-details-values">
+              <p class="windspeed">0 Km/h</p>
+              <p class="humidity">0 %</p>
+              <p class="pressure">0 hPa</p>
+              <p class="sunrise-time">0:00 am</p>
+              <p class="sunset-time">0:00 pm</p>
+            </div>
+          </div>
+        </div>
+              </div>
+</div>
         <script src="index.js">
         </script>
-        <marquee behavior="" direction=""><footer>&#169;Akash Negi, Ankur Panthri and Ritvik Kotari(chapa)&#174; <i>verified at Doon University</i></p></footer></marquee>
+        <marquee behavior="" direction=""><footer>&#169;Akash Negi <i>verified at Doon University</i></p></footer></marquee>
 </body>
 </html>
