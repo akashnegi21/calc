@@ -26,10 +26,12 @@
                 <button class="calc-button" id="multiply" onclick="operation('mul')">*</button>
                 <button class="calc-button" id="divide" onclick="operation('div')">/</button>
 
-                <button class="calc-button" id="leftshift" onclick="operation('leftshift')"><<<</button>
-                <button class="calc-button" id="rightshift" onclick="operation('rightshift')">>>></button>
-                <button class="calc-button" id="binaryand" onclick="operation('binaryand')">&</button> 
-                <button class="calc-button" id="binaryor" onclick="operation('binaryor')">|</button>
+                <button class="calc-button" id="btnLeft" onclick="leftbinary()"> << </button>
+                <button class="calc-button" id="btnRight" onclick="rightbinary()"> >> </button>
+            
+                <button class="calc-button" id="btnAnd" onclick="operation('and')"> & </button>
+             
+                <button class="calc-button" id="btnOr" onclick="operation('or')">|</button>
                 <button class="calc-button equals" id="equals"'>&equals;</button>
             </div>
         
