@@ -4,12 +4,13 @@
     margin: 0;
 }
 .left{
+  padding-left: 17;
     float: left;
     /* background-color: blue; */
-    width: 40%;   
+    width: 32%;   
 }
 .right{
-    width:60%;
+    width:50%;
     float:right;
     /* background-color: green; */
 }
@@ -137,15 +138,15 @@ body {
 }
 
 .bottom-right {
-  height: 40%;
-  width: 55%;
+  height: 30%;
+  width: 50%;
   /*   background-color: brown; */
   float: right;
-  padding: 25px 0 0 60px;
+  padding: 21px 0 0 50px;
 }
 
 h1{
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 h2,
 h3,
@@ -159,7 +160,7 @@ p {
 
 #city {
   font-weight: 900;
-  font-size: 25px;
+  font-size: 35px;
 }
 
 #day {
