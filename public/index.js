@@ -122,9 +122,38 @@ function operation(e){
     }
         
     }
-    else if(e=='leftshift'){
+    else if(e=='and'){
+        temp=input.value+'&'
+        input.value=temp;
+        var a=document.getElementById('equals');
+        a.onclick=()=>
+            {
+        var num = temp.split("&"); 
+        var x = parseInt(num[0], 2); 
+        var y = parseInt(num[1], 2); 
         
+        var or1 = x & y;
+        
+        input.value=(or1.toString(2));
+    }}
+    else if(e=='or'){
+        temp=input.value+'|'
+        input.value=temp;
+        var a=document.getElementById('equals');
+        a.onclick=()=>
+            {
+        var num = temp.split("|"); 
+        var x = parseInt(num[0], 2); 
+        var y = parseInt(num[1], 2); 
+        
+        var div = x | y;
+        
+        input.value=(div.toString(2));
+                
+    }   
     }
+
+
 }
 function randomBinary(){
     function randomDigit() {
@@ -138,7 +167,17 @@ function randomBinary(){
         input.value=binary;
         temp=binary;
       }
+function leftbinary(){
 
+    let n=input.value.length;
+                string=input.value.slice(n-1)+input.value.slice(0,n-1);
+              input.value=string;
+}
+function rightbinary(){
+    let n=input.value.length;
+    string=input.value.slice(1,n)+input.value.slice(0,1);
+  input.value=string;
+}
 
 
 //weather
