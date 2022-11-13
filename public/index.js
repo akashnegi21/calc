@@ -209,4 +209,7 @@ fetch(site)
         else if(data.weather[0].main == 'Clouds'){
             iTag.innerHTML = '<i class="fa fa-cloud"></i>';
         }
+    else if(data.weather[0].main == 'Clear'){
+            iTag.innerHTML = '<i class="fa fa-sun"></i>';
+        }
     });
