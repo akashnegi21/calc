@@ -7,10 +7,11 @@
   padding-left: 17;
     float: left;
     /* background-color: blue; */
-    width: 32%;   
+    width: 40%;   
 }
 .right{
-    width:50%;
+    width:90%;
+    margin-right: 50px;
     float:right;
     /* background-color: green; */
 }
@@ -228,7 +229,7 @@ p {
   position: absolute;
   height: 167px;
   background-color: #263238;
-  float: right;
+
   display: inline-block;
   padding: 0;
 }
@@ -310,3 +311,10 @@ p {
 marquee{
     padding-top:30;
 }
+
+@media screen and (min-width: 780px ) {
+    .right {
+      width:50% ;
+    
+    }
+  }
