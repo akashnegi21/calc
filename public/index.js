@@ -185,7 +185,7 @@ const date = new Date();
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 let day = days[date.getDay()];
-let site = 'https://api.openweathermap.org/data/2.5/weather?q=Dehradun&appid=d0ac0b02eb3f727ee5ab0a7c005e6a54';
+let site = 'https://api.openweathermap.org/data/2.5/weather?q=Dehradun&appid=dc9ef70e199943213a41d44df6533cd0';
 const iTag = document.querySelector('.ico');
 
 fetch(site)
