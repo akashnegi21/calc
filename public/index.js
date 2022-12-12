@@ -185,22 +185,21 @@ const date = new Date();
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 let day = days[date.getDay()];
-let site = 'https://api.openweathermap.org/data/2.5/weather?q=Dehradun&metric&appid=dc9ef70e199943213a41d44df6533cd0';
+let site = 'https://api.openweathermap.org/data/2.5/weather?q=Dehradun&units=metric&appid=dc9ef70e199943213a41d44df6533cd0';
 const iTag = document.querySelector('.ico');
 
 fetch(site)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
-        document.querySelector('#temperature').innerHTML = (data.main.temp-273.5).toFixed(0);
+        document.querySelector('#temperature').innerHTML = data.main.temp;
         document.querySelector('#city').innerHTML =data.name;
         document.querySelector('#day').innerHTML =day;
         document.querySelector('#date').innerHTML = `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}`;
         document.querySelector('.windspeed').innerHTML =data.wind.speed;
         document.querySelector('.humidity').innerHTML = data.main.humidity;
         document.querySelector('.pressure').innerHTML = data.main.pressure;
-        document.querySelector('.sunrise-time').innerHTML =(data.sys.sunrise-273.5).toFixed(0);
-        document.querySelector('.sunset-time').innerHTML = (data.sys.sunset-273.5).toFixed(0);
+        document.querySelector('.sunrise-time').innerHTML =`${new Date(data.sys.sunrise*1000).getHours()}:${new Date(data.sys.sunrise*1000).getMinutes()} AM`;
+        document.querySelector('.sunset-time').innerHTML = `${new Date(data.sys.sunset*1000).getHours()}:${new Date(data.sys.sunset*1000).getMinutes()} PM`;
         document.querySelector('#weather-status').innerHTML = data.weather[0].main;
         if(data.weather[0].main == 'Sunny'){
             console.log(data.weather[0].main);
