@@ -192,15 +192,15 @@ fetch(site)
       .then(response => response.json())
       .then(data => {
         console.log(data);
-        document.querySelector('#temperature').innerHTML = data.main.temp
+        document.querySelector('#temperature').innerHTML = (data.main.temp-273.5).toFixed(0);
         document.querySelector('#city').innerHTML =data.name;
         document.querySelector('#day').innerHTML =day;
         document.querySelector('#date').innerHTML = `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}`;
         document.querySelector('.windspeed').innerHTML =data.wind.speed;
         document.querySelector('.humidity').innerHTML = data.main.humidity;
         document.querySelector('.pressure').innerHTML = data.main.pressure;
-        document.querySelector('.sunrise-time').innerHTML = data.sys.sunrise;
-        document.querySelector('.sunset-time').innerHTML = data.sys.sunset;
+        document.querySelector('.sunrise-time').innerHTML =(data.sys.sunrise-273.5).toFixed(0);
+        document.querySelector('.sunset-time').innerHTML = (data.sys.sunset-273.5).toFixed(0);
         document.querySelector('#weather-status').innerHTML = data.weather[0].main;
         if(data.weather[0].main == 'Sunny'){
             console.log(data.weather[0].main);
