@@ -192,7 +192,7 @@ fetch(site)
       .then(response => response.json())
       .then(data => {
         console.log(data);
-        document.querySelector('#temperature').innerHTML = (data.main.temp-273.5).toFixed(0);
+        document.querySelector('#temperature').innerHTML = data.main.temp
         document.querySelector('#city').innerHTML =data.name;
         document.querySelector('#day').innerHTML =day;
         document.querySelector('#date').innerHTML = `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}`;
